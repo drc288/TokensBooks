@@ -8,9 +8,9 @@ import (
 
 func ServicesSetup(app *fiber.App) {
 	api := app.Group("/api", logger.New())
-	api.Get("/", handlers.Basic)
+	api.Get("/health", handlers.Healt)
 
 	// Auth
 	auth := api.Group("/auth")
-	auth.Post("/login")
+	auth.Post("/registry", handlers.Registry)
 }

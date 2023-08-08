@@ -9,7 +9,7 @@ import (
 )
 
 const DB_USERNAME = "drose"
-const DB_PASSWORD = "Daroca2888138"
+const DB_PASSWORD = "Daroca288"
 const DB_NAME = "contable"
 const DB_HOST = "127.0.0.1"
 const DB_PORT = "3306"
