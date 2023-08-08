@@ -13,4 +13,5 @@ func ServicesSetup(app *fiber.App) {
 	// Auth
 	auth := api.Group("/auth")
 	auth.Post("/registry", handlers.Registry)
+	auth.Post("/login", handlers.Login)
 }
