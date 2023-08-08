@@ -30,4 +30,5 @@ func MysqlConnection() *gorm.DB {
 		return nil
 	}
 	return db
+
 }
