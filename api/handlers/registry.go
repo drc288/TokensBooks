@@ -33,6 +33,14 @@ func Registry(c *fiber.Ctx) error {
 		return c.Status(fiber.StatusBadRequest).SendString("Password is necesari more than 6 characters")
 	}
 
+	// Las siguientes lineas validan la duplicacion del email pero desde la estructura del usuario ya se hacen estas validaciones
+	// Se deja este codigo para ejemplos futuros
+	_, findEmail := database.ValidateEmail(email)
+
+	if findEmail {
+		return c.Status(fiber.StatusBadRequest).SendString("Error email in database")
+	}
+
 	userId, status, err := database.RegistryUser(u)
 
 	if err != nil {
