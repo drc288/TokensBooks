@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  auth:
+    build: "."
+    ports:
+      - "8080:8080"
+    expose:
+      - 8080
+    # If the container goes down, it will restart
+    restart: "on-failure"
+    depends_on:
+      - mariadb
+    networks:
+      - contable
+  mariadb:
+    image: yobasystems/alpine-mariadb:latest
+    ports:
+      - "3306:3306"
+    expose:
+      - 3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=Daroca2888138
+      - MYSQL_USER=drose
+      - MYSQL_PASSWORD=Daroca288
+      - MYSQL_DATABASE=contable
+    networks:
+      - contable
+networks:
+  contable:
