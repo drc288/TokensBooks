@@ -1,8 +1,6 @@
 # Api de authenticacion
 
-Esta api se conecta a una base de datos para logearse y retornar un token JTW
-
-## APIs
+Aplicacion de administracion contable
 
 ### /api/health
 
@@ -16,12 +14,12 @@ Crea un usuario y returna su ID
 
 Returna el Token JWT
 
-## Docker
-```bash
-docker pull drc288/mariadb-contable:0.0.1
-docker run --detach --name mariabd-contable -p 3306:3306 drc288/mariadb-contable:0.0.1
+## Docker compose
+```bass
+docker-compose build
+docker-compose up
 ```
 
 ### Base de datos
 
-Se integra en el proyecto una imagen de docker la cual emula la base de datos con la base de datos creada
+Se integra en la ejecucuin de docker-compose

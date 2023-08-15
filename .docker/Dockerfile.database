@@ -1,8 +1,0 @@
-FROM yobasystems/alpine-mariadb:latest
-
-ENV MYSQL_ROOT_PASSWORD=Daroca2888138
-ENV MYSQL_USER=drose
-ENV MYSQL_PASSWORD=Daroca288
-ENV MYSQL_DATABASE=contable
-
-EXPOSE 3306
